@@ -81,7 +81,7 @@ a{
     background-image:linear-gradient(#000000e0, #000000e0), url(../images/hero-bg-H6PoyNYD.jpg);
     background-size: cover;
     background-position: 50%;
-
+    
 }
 .hero-title h1{
     font-size: 70px;
@@ -361,6 +361,13 @@ a{
 .reverse .track {
     animation-direction: reverse;
 }
+.coll-cards .row,
+.teams-card .row {
+    --bs-gutter-x: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
 /* .............................................what we do end.............................................. */
 /* .....................................................team sec start............................................. */
 .teams{
@@ -396,6 +403,11 @@ a{
 .team-card:hover .game,
 .team-card:hover .champion {
     color: var(--primary-color);
+}
+.coll-cards .row > *,
+.teams-card .row > * {
+    width: 100% !important;
+    margin: 0;
 }
 /* ....................................team  end...................................... */
 /* ..................................form start............................................. */
@@ -498,22 +510,7 @@ textarea{
     margin-top: 40px;
     padding-top: 32px;
 }
-.coll-cards .row,
-.teams-card .row {
-    --bs-gutter-x: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-.coll-cards .row > *,
-.teams-card .row > * {
-    width: 100% !important;
-    margin: 0;
-}
 
-.hero-title h1 {
-    font-size: clamp(32px, 6vw, 60px);
-}
 /* ...................................meadia............................... */
 @media (max-width: 991.98px) {
     .coll-cards .row,
